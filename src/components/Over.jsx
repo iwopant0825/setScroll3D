@@ -24,7 +24,9 @@ export default function Over({setSceneAn,setSrcolltest}) {
     };
   
     useFrame(() => {
-      const scrollData = (Math.round(scroll.offset * 100) / 100) * 4 + 1;
+      let offset = scroll.offset;
+      offset = Math.max(0, Math.min(1, offset));
+      const scrollData = (Math.round(offset * 100) / 100) * 4 + 1;
       setSrcolltest(scrollData)
       // if (page == 1) {
       //   if (scrollData >= page + 0.0001 && scrollData < page + 0.8) {

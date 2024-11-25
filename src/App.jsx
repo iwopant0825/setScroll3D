@@ -19,7 +19,7 @@ export default function App() {
       <OverHeader srcolltest={srcolltest}/>
       <Canvas style={{ position: "absolute" }}>
         <ambientLight />
-        <ScrollControls pages={6} damping={0}>
+        <ScrollControls pages={5} damping={0}>
           <ScrollManager />
           <Scene sceneAn={sceneAn}/>
           <Scroll html style={{ width: "100%" }}>
