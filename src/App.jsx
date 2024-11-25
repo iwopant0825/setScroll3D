@@ -20,9 +20,9 @@ export default function App() {
       <Canvas style={{ position: "absolute" }}>
         <ambientLight />
         <ScrollControls pages={5} damping={0}>
-          <ScrollManager />
-          <Scene sceneAn={sceneAn}/>
-          <Scroll html style={{ width: "100%" }}>
+          {/* <ScrollManager />
+          <Scene sceneAn={sceneAn}/> */}
+          <Scroll html style={{ width: "100%", height:"100%" }}>
             <Over setSrcolltest={setSrcolltest} setSceneAn={setSceneAn}/>
           </Scroll>
         </ScrollControls>
