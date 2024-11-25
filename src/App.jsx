@@ -1,4 +1,5 @@
 import {
+  Html,
   Scroll,
   ScrollControls,
 } from "@react-three/drei";
@@ -8,18 +9,21 @@ import Over from "./components/Over";
 import { Canvas } from "@react-three/fiber";
 import { useState } from "react";
 import styled from "styled-components";
+import OverHeader from "./components/Header";
 
 export default function App() {
   const [sceneAn, setSceneAn] = useState(1)
+  const [srcolltest, setSrcolltest] = useState(0)
   return (
     <Layout>
+      <OverHeader srcolltest={srcolltest}/>
       <Canvas style={{ position: "absolute" }}>
         <ambientLight />
         <ScrollControls pages={5} damping={0.3}>
           <ScrollManager />
           <Scene sceneAn={sceneAn}/>
           <Scroll html style={{ width: "100%" }}>
-            <Over setSceneAn={setSceneAn}/>
+            <Over setSrcolltest={setSrcolltest} setSceneAn={setSceneAn}/>
           </Scroll>
         </ScrollControls>
       </Canvas>

@@ -7,7 +7,7 @@ import Section3 from "./OverComponents/Section3";
 import Section4 from "./OverComponents/Section4";
 import Section5 from "./OverComponents/Section5";
 
-export default function Over({setSceneAn}) {
+export default function Over({setSceneAn,setSrcolltest}) {
     const scroll = useScroll();
     const test1 = useRef(null);
     const test2 = useRef(null);
@@ -25,7 +25,7 @@ export default function Over({setSceneAn}) {
   
     useFrame(() => {
       const scrollData = (Math.round(scroll.offset * 100) / 100) * 4 + 1;
-  
+      setSrcolltest(scrollData)
       if (page == 1) {
         if (scrollData >= page + 0.0001 && scrollData < page + 0.8) {
           setSceneAn(2)
