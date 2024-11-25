@@ -35,4 +35,5 @@ const Layout = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
+  height: 100vh;
 `;
