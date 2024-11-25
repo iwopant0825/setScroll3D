@@ -15,7 +15,7 @@ export default function App() {
     <Layout>
       <Canvas style={{ position: "absolute" }}>
         <ambientLight />
-        <ScrollControls pages={5} damping={0.2}>
+        <ScrollControls pages={5} damping={0.3}>
           <ScrollManager />
           <Scene sceneAn={sceneAn}/>
           <Scroll html style={{ width: "100%" }}>
